@@ -1,0 +1,11 @@
+{
+  "title": "旅先コンセント地図",
+  "archetype": "plug_match",
+  "interaction_model": "toggle_devices_to_needed_accessories",
+  "primary_layout": "device_strip_with_accessory_tray",
+  "result_presentation_style": "required_vs_extra_accessories",
+  "palette_motif": "ガジェットスチール",
+  "main_cta": "持ち出す端末で試す",
+  "intro_variant": "device_bundle",
+  "ui_variant": "cable"
+}

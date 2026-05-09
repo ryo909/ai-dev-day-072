@@ -1,42 +1,40 @@
-# ai-dev-exp-template
+# Day072 — 旅先コンセント地図
 
-Vite-based single-page template for `ai-dev-day-XXX` repositories.
+> 旅先の充電セットを決めるためのツールです。
+>
+> Complexity Tier: small
+>
+> Selected Components: none
+>
+> Family / Mechanic: travel_socket_layout / plug_match
+>
+> Input -> Output: device_slots -> device_bundle
+>
+> Audience Promise: 充電まわりの不足を荷造り前に潰せる。
 
-## Required meta.json fields
+## 使い方
 
-- `day` (e.g. `Day001`)
-- `title`
-- `description`
-- `genre`
-- `theme`
-- `story_summary`
+このツールでできること
+旅先の充電セットを決めるためのツールです。
 
-## Theme behavior
+こんな時に使います
+旅行前夜に充電器を詰める前に使います。
 
-- `src/themes.js` defines 8 visual themes.
-- Runtime applies `meta.json.theme` using CSS variables.
-- Day repos should set `theme` with a day-seeded deterministic selector.
+使い方
+1. 項目を入れる
+2. 追加や編集をする
+3. 結果を見る
 
-## Component Packs (tiered build)
+## Story
 
-- Template reads `complexity_tier` / `selected_components` from `meta.json`.
-- `selected_components` is missing: runs as small tier baseline with all packs OFF.
-- Unknown component names are ignored safely.
-- Each pack can be toggled independently and app core flow still works.
+- [制作ストーリー](./STORY.md)
+- Complexity hint: Implement the locked brief with one clear hero interaction and keep the main screenshot readable.
+- Publish hook: 機器と必要口数を入れると、足りない口数と持つべきケーブル束が一画面で見える。
 
-Supported packs:
+## Demo
 
-- `reason_panel`
-- `sample_inputs`
-- `local_storage`
-- `comparison_view`
-- `history_panel`
-- `export_suite`
-- `step_ui`
+🌐 [GitHub Pages](https://ryo909.github.io/ai-dev-day-072/)
 
-### Quality/Fallback integration
+---
 
-- Every pack root includes `data-quality-marker="<pack_name>"` for evaluator detection.
-- Runtime manifest is published to `window.__COMPONENT_PACKS__` and script node `#componentPackManifest`.
-- Static fallback manifest exists at `public/component-pack-manifest.json`.
-- Medium/Large can increase visual depth safely by selecting more packs without changing core logic.
+Day072 / #100日開発
